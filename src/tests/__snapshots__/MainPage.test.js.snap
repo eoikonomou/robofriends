@@ -23,9 +23,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Header />,
-        <CounterButton
-          color="red"
-/>,
+        <CounterButton />,
         <SearchBox
           searchChange={undefined}
 />,
@@ -52,9 +50,7 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "class",
-        "props": Object {
-          "color": "red",
-        },
+        "props": Object {},
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -104,9 +100,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Header />,
-          <CounterButton
-            color="red"
-/>,
+          <CounterButton />,
           <SearchBox
             searchChange={undefined}
 />,
@@ -133,9 +127,7 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "class",
-          "props": Object {
-            "color": "red",
-          },
+          "props": Object {},
           "ref": null,
           "rendered": null,
           "type": [Function],
