@@ -9,7 +9,7 @@ import App from './containers/App';
 import registerServiceWorker from './registerServiceWorker';
 import 'tachyons';
 import { searchRobots, requestRobots } from './reducers';
-import ErrorBoundry from './components/ErrorBoundry';
+import ErrorBoundary from './components/ErrorBoundary';
 
 const logger = createLogger();
 const rootReducer = combineReducers({ searchRobots, requestRobots });
@@ -17,8 +17,8 @@ const store = createStore(rootReducer, applyMiddleware(thunkMiddleware, logger))
 
 ReactDOM.render(
     <Provider store={store}>
-        <ErrorBoundry>
+        <ErrorBoundary>
             <App />
-        </ErrorBoundry>
+        </ErrorBoundary>
     </Provider>, document.getElementById('root'));
 registerServiceWorker();
