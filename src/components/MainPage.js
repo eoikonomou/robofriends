@@ -24,7 +24,7 @@ class MainPage extends React.Component {
         return (
             <div className="tc">
                 <Header />
-                <CounterButton color={'red'} />
+                <CounterButton />
                 <SearchBox searchChange={onSearchChange} />
                 <Scroll>
                     {isPending ?
