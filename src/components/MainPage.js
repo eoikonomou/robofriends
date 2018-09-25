@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import CardList from './CardList';
 import CounterButton from './CounterButton';
 import SearchBox from './SearchBox';
