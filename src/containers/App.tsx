@@ -4,6 +4,21 @@ import { setSearchField, requestRobots } from '../actions';
 import './App.css';
 import MainPage from '../components/MainPage';
 
+export interface IRobot {
+    name: string;
+    id: number;
+    email: string;
+}
+
+interface IAppProps {
+
+}
+
+interface IAppState {
+    robots: Array<IRobot>;
+    searchfield: string;
+}
+
 const mapStateToProps = (state) => {
     return {
         searchField: state.searchRobots.searchField,
@@ -15,13 +30,13 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        onSearchChange: (event) => { dispatch(setSearchField(event.target.value)); },
+        onSearchChange: (event: React.SyntheticEvent<HTMLInputElement>): void => { dispatch(setSearchField(event.currentTarget.value)); },
         onRequestRobots: () => dispatch(requestRobots())
     };
 };
 
-class App extends React.Component {
-    render() { return (<MainPage {...this.props} />); }
+class App extends React.Component<IAppProps, IAppState> {
+    render(): JSX.Element { return (<MainPage {...this.props} />); }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

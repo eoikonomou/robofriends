@@ -2,11 +2,11 @@ import * as React from 'react';
 
 class Header extends React.Component {
 
-    shouldComponentUpdate(nextProps, nextState) {
+    shouldComponentUpdate(nextProps, nextState): boolean {
         return false;
     }
 
-    render() {
+    render(): JSX.Element {
         return (
             <div>
                 <h1 className="f1">RoboFriends</h1>

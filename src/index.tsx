@@ -20,5 +20,5 @@ ReactDOM.render(
         <ErrorBoundary>
             <App />
         </ErrorBoundary>
-    </Provider>, document.getElementById('root'));
+    </Provider>, document.getElementById('root')) as HTMLElement;
 registerServiceWorker();
